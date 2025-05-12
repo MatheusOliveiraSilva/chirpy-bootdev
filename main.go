@@ -5,7 +5,6 @@ import (
 	"net/http"
 )
 
-// chirpy checkpoint
 func main() {
 	mux := http.NewServeMux()
 	mux.Handle("/app/", http.StripPrefix("/app/", http.FileServer(http.Dir("./app"))))
